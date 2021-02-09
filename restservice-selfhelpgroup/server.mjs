@@ -1,17 +1,14 @@
+import sendMail from "./sendingmail.mjs";
 
 const express = require("express"); 
 const bodyParser = require("body-parser");
 const app = express();
 
-app.use(bodyParser.json());
+// the request to the post method should be parsed as xml
+app.use(bodyParser.xml());
 
-// to recaive REST messages that are containig all the information wee require to give someone the advice to seek a therapist, we use post.
-/*const getVarMail = ( (req, res) => { export body = req.body; };
-const sendResponceOK = (req, res) => {  res.send("Responce :200"); } ); // ToDo StandartREST responce
-*/
-app.post( req , res ) => { export body = req.body; res.send("Responce :200");}
-
-//( getVarMail , sendResponceOK );
+// programming the post method
+app.post("/restservice-selfhelpgroup", ( req , res ) => { let body = req.body; res.status(200).end();})
 
 sendMail(body);
 
