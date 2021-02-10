@@ -1,4 +1,4 @@
-import sendMail from "./sendingmail.mjs";
+import sendMail from "./sendingMail.mjs";
 
 const express = require("express"); 
 const bodyParser = require("body-parser");
@@ -10,5 +10,7 @@ app.use(bodyParser.xml());
 // programming the post method
 app.post("/restservice-selfhelpgroup", ( req , res ) => { let body = req.body; res.status(200).end();})
 
-sendMail(body);
+var experience = body.experience;
+console.log(experience)
+//sendMail(body);
 
