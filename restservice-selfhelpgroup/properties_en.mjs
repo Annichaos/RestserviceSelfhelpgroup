@@ -1,4 +1,4 @@
-export const greeting_en = 'export const greeting = 'G';
+export const greeting_en = 'Hello';
 
 export const message_en = 'This recommendation for you from the Brain Machine Interfaces support group was created automatically. We will be glad if you contact us. We are sure that you have been in contact with this technology. With this technology several people can be neurologically connected. The brain is stimulated or the different brain regions get additional signals. So it enhances their senses. It is like a kind of artificial telepathy, but it is also possible that the signals of their central nervous system are exchanged in such a way that they experience as another person their reality or also take additional sensory impressions from another reality. In this case it is also possible that you have not been able to dedicate yourself properly to your tasks in life and that you have memories that you cannot explain properly.\n However, we write to them to give them advice because they may be experiencing emotional states that are inexplicable to themselves. ';
 
