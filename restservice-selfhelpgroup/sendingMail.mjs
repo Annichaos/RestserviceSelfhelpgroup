@@ -1,12 +1,13 @@
+import { greeting_en, message_en, messageDepresive_en, messageSadist_en, messageExperience_en, messageFainting_en } from "./properties_en.mjs";
+import { greeting_de, message_de, messageDepresive_de, messageSadist_de, messageExperience_de, messageFainting_de } from "./properties_de.mjs";
+//ToDo 	readd this variables from the body-parser
+import { surname , name , salutation, language , email , personalityDamage, ExperienceType , experienceDescription , coment } from "./myXML.mjs";
+
+const nodemailer = require("nodemailer");
 
 //for the variables of the properties files, the once that are necaserry for writing an email. 
-export fuction sendMail(body){
-	import { greeting_en, message_en, messageDepresive_en, messageSadist_en, messageExperience_en, messageFainting_en } from "./properties_en.mjs";
-	import { greeting_de, message_de, messageDepresive_de, messageSadist_de, messageExperience_de, messageFainting_de } from "./properties_de.mjs";
-	
-	import myXML from "./myXML.mjs";
-	
-	import nodemailer from ('nodemailer');
+export function sendMail(body){
+
 //const mailText = require('mailText');
 
 let transport = nodemailer.createTransport({
@@ -45,22 +46,19 @@ let transport = nodemailer.createTransport({
 
 	//read the variables from the XML received with REST service
 	
-		const { surname , name , salutation, language , email , personalityDamage, ExperienceType , experienceDescription , coment } = myXml.read(body)
-		
 	var mailText = ''. concat( greeting , name, ' ' , surname, '/' , message)
 	if ( personalityDamage = "depresiv") {
 		mailText = mailText.concat( messageDepresive );
- 	}elseif( personalityDamage = "sadist" ){
+ 	}else if( personalityDamage = "sadist" ){
 		mailText = mailText.concat(messageSadist);
 	}
 	if ( messageExperience != "") {
 		  mailText = mailText.concat( messageExperience )
 		  if ( messageExperience == "fainting" ){
 			mailText = mailText.concat( messageFainting );
-		  }elseif( messageExperience == "death" ){
+		  }else if( messageExperience == "death" ){
 			mailText = mailText.concat( messageDeath );
 		  }
-		  , 
 		mailText = mailText.concat( messageExperience );
 	}
 	mailText = mailText.concat( comment );
