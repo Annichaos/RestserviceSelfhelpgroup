@@ -1,0 +1,19 @@
+{
+  "name": "restservice-selbsthilfegrupe",
+  "version": "1.0.0",
+  "description": "This package will run a server with a REST service that sends mails. If a problem to the psych is recorded a RESTMessage is send. Than the person gets an email to seek an therapist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "annika beissler",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "esb": "^0.1.13",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.17",
+    "tsc": "^1.20150623.0"
+  }
+}
